@@ -85,26 +85,34 @@ Before running the project, make sure you have:
    - Plan infrastructure: docker-compose run --rm terraform terraform plan
    - Apply infrastructure: docker-compose run --rm terraform terraform apply
    - (Optional) Destroy infrastructure: docker-compose run --rm terraform terraform destroy
+
+
 2. Run the Airflow DAG
    - From the root spotify folder: cd spotify
    - Spin up all services: docker-compose up --build -d
    - Go to http://localhost:8080
    - Trigger the DAG named spotify
    - ➡️ You will see 6 tables created in BigQuery:
-      In spotify schema:
-         dim_artists
-         dim_albums
-         dim_tracks
-         fctls_albums_artists
-         fctls_tracks_artists
-         fctls_albums_country_available
-      In spotify_stg schema:
-         Raw data from Spotify API (artists, albums, tracks)
+      In `spotify` schema:
+         `dim_artists`
+         `dim_albums`
+         `dim_tracks`
+         `fctls_albums_artists`
+         `fctls_tracks_artists`
+         `fctls_albums_country_available`
+      In `spotify_stg` schema:
+         Raw data from Spotify API (`artists`, `albums`, `tracks`)
+
    ![Spotify Pipeline](images/spotify_dag.jpg)
+
    ![Bigquery](images/bigquery.jpg)
+
+
 3. Run Streamlit Dashboard (optional)
    - From the root spotify folder: docker-compose run --rm --entrypoint "" python sh -c "streamlit run dashboard/spotify_dashboard.py"
    - ➡️ Open browser at http://localhost:8501 to view the dashboard.
+
+   ![Dashboard](images/dashboard.jpg)
 ---
 
 This project is built for learning purposes and showcases a full modern data stack in action 💪
