@@ -1,0 +1,112 @@
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all .tfvars files, which are likely to contain sensitive data, such as
+# password, private keys, and other secrets. These should not be part of version 
+# control as they are data points which are potentially sensitive and subject 
+# to change depending on the environment.
+*.tfvars
+*.tfvars.json
+
+# Ignore override files as they are usually used to override resources locally and so
+# are not checked in
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore transient lock info files created by terraform apply
+.terraform.tfstate.lock.info
+
+# Include override files you do wish to add to version control using negated pattern
+# !example_override.tf
+
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+# example: *tfplan*
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+
+target/
+dbt_modules/
+dbt_packages/
+logs/
+venv/
+__pycache__
+.tox/
+/.pytest_cache/
+
+
+# Ignore all directories that start with 'env-' and can have any name after
+env*/
+
+# Do not ignore .env files in any directory and do not ignore .env directories
+!.env
+!*/.env/
+
+# But explicitly ignore test.env files
+test.env
+
+# Airflow configuration
+airflow.cfg
+airflow_login.py
+dbinit.py
+initdb.py
+secrets.py
+
+# Airflow sqlite databases
+airflow.db
+
+# Airflow temporary artifacts
+airflow-core/src/airflow/git_version
+airflow-core/src/airflow/ui/coverage/
+# and legacy ones
+airflow/git_version
+airflow/ui/coverage/
+logs/
+airflow-webserver.pid
+standalone_admin_password.txt
+warnings.txt
+warn-summary-*.txt
+
+# Ruff cache
+.ruff-cache
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+!providers/fab/**/www/static/dist
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg

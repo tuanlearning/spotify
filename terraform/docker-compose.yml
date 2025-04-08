@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  terraform: 
+    build: .
+    volumes:
+      - .:/opt/terraform
+      - ../credentials/gcp.json:/opt/terraform/gcp.json
+    working_dir: /opt/terraform
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/opt/terraform/gcp.json

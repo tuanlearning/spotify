@@ -1,0 +1,10 @@
+
+version: 2
+
+models:
+  - name: dim_artists
+  - name: dim_albums
+  - name: dim_tracks
+  - name: fctls_albums_country_available
+  - name: fctls_albums_artists
+  - name: fctls_tracks_artists

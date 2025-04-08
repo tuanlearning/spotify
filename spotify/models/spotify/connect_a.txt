@@ -1,0 +1,6 @@
+select a.*, b.artist_id, c.name artist_name
+  from spotify.dim_albums a
+  inner join spotify.fctls_albums_artists b
+  on a.album_id = b.album_id
+  inner join spotify.dim_artists c
+  on b.artist_id = c.id

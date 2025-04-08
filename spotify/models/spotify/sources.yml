@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: spotify_stg
+    schema: spotify_stg
+    tables:
+      - name: artists
+        description: "This table contains raw artist data."
+      - name: albums
+        description: "This table contains raw album data."
+      - name: tracks
+        description: "This table contains raw track data."
