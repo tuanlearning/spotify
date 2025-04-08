@@ -116,3 +116,5 @@ Before running the project, make sure you have:
 ---
 
 This project is built for learning purposes and showcases a full modern data stack in action 💪
+
+Flink Bro Rock <3 !!!
